@@ -1,11 +1,9 @@
-FROM openjdk:8u151-jdk-alpine3.7
-
+FROM ubuntu:latest
+LABEL maintainer="venky"
+COPY . .
+RUN apt-get update
+RUN apt-get install -y apache2
 EXPOSE 8070
-
-ENV APP_HOME /usr/src/app
-
-COPY target/shopping-cart-0.0.1-SNAPSHOT.jar $APP_HOME/app.jar
-
-WORKDIR $APP_HOME
-
-ENTRYPOINT exec java -jar app.jar
+VOLUME /node
+ENTRYPOINT ["ls"]
+CMD [echo "image generated"]
