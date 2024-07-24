@@ -1,4 +1,4 @@
-# Spring Boot Shopping Cart Web App
+# Interior_Design_Web App
 
 ## About
 
@@ -9,14 +9,11 @@ Database is in memory **H2**.
 
 There is a login and registration functionality included.
 
-Users can shop for products. Each user has his own shopping cart (session functionality).
-Checkout is transactional.
-
 ## Configuration
 
 ### Configuration Files
 
-Folder **src/resources/** contains config files for **shopping-cart** Spring Boot application.
+Folder **src/resources/** contains config files for **Interior_Design_Web App** Spring Boot application.
 
 * **src/resources/application.properties** - main configuration file. Here it is possible to change admin username/password,
 as well as change the port number.
@@ -54,7 +51,7 @@ $ scripts/mvnw clean package
 
 Then you can run the JAR file:
 ```bash
-$ java -jar target/shopping-cart-0.0.1-SNAPSHOT.jar
+$ java -jar target/Interior_Design_Web App-0.0.1-SNAPSHOT.jar
 ```
 
 ### Maven
@@ -96,26 +93,26 @@ $ mvn clean package
 To run that application, use the java -jar command, as follows:
 
 ```bash
-$ java -jar target/shopping-cart-0.0.1-SNAPSHOT.jar
+$ java -jar target/Interior_Design_Web App-0.0.1-SNAPSHOT.jar
 ```
 
 To exit the application, press **ctrl-c**.
 
 ### Docker
 
-It is possible to run **shopping-cart** using Docker:
+It is possible to run **Interior_Design_Web App** using Docker:
 
 Build Docker image:
 ```bash
 $ mvn clean package
-$ docker build -t shopping-cart:dev -f docker/Dockerfile .
+$ docker build -t Interior_Design_Web App:dev -f docker/Dockerfile .
 ```
 
 Run Docker container:
 ```bash
 $ docker run --rm -i -p 8070:8070 \
-      --name shopping-cart \
-      shopping-cart:dev
+      --name Interior_Design_Web App \
+      Interior_Design_Web App:dev
 ```
 
 ##### Helper script
@@ -131,7 +128,7 @@ $ scripts/run_docker.sh
 
 Folder **docker** contains:
 
-* **docker/shopping-cart/Dockerfile** - Docker build file for executing shopping-cart Docker image. 
+* **docker/Interior_Design_Web App/Dockerfile** - Docker build file for executing shopping-cart Docker image. 
 Instructions to build artifacts, copy build artifacts to docker image and then run app on proper port with proper configuration file.
 
 ## Util Scripts
@@ -160,7 +157,7 @@ Go to the web browser and visit `http://localhost:8070/h2-console`
 
 In field **JDBC URL** put 
 ```
-jdbc:h2:mem:shopping_cart_db
+jdbc:h2:mem:Interior_Design_Web App_db
 ```
 
 In `/src/main/resources/application.properties` file it is possible to change both
