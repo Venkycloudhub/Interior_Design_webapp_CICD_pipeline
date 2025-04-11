@@ -4,4 +4,4 @@
     - name: create new deployment
       command: kubectl apply -f deployment.yaml
     - name: create new service
-      command: kubectl apply -f service.yaml  
+      command: kubectl apply -f Service.yaml  
