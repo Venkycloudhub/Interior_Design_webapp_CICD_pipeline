@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: webappcontainer
-          image: venky12345/estoreapp:latest # Image that will be used to containers in the cluster
+          image: venky12345/webapp:latest # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080 # The port that the container is running on in the cluster
+            - containerPort: 8040 # The port that the container is running on in the cluster
